@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Grid View
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<div class="overflow-auto">
+	<ion-card *ngFor="let post of posts">
+	  <img src="../assets/images/image.png" />
+  <ion-card-header>
+    <ion-card-subtitle>{{post.subtitle}}</ion-card-subtitle>
+    <ion-card-title>{{post.title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+   {{post.Content}}
+  </ion-card-content>
+</ion-card>
+
+</div>
